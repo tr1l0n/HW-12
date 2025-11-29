@@ -105,3 +105,119 @@
 // console.log(calculateTotalPRice(products, 'banana'));
 // console.log(calculateTotalPRice(products,'kiwi'));
 // console.log(calculateTotalPRice(products,'mango'));
+
+
+// Деструктуризація
+// 1
+// let user = {
+//     hobby: 'programming',
+//     premium: true,
+// }
+// const { hobby, premium } = user;
+// console.log(hobby,premium);
+
+// 2
+// let dima = {
+//     height: 182,
+//     age: 16,
+//     name:'dima',
+// }
+// const { height, age, name } = dima;
+// console.log(height,age,name);
+
+// 3
+// let employee = {
+//     'dima': 3,
+//     'artur': 4,
+//     'pasha': 2,
+//     'sasha':7,
+// }
+// const { dima, artur, pasha, sasha } = employee;
+// console.log(dima,artur);
+
+// 4
+// let employee = {
+//     'dima': 3000,
+//     'artur': 4000,
+//     'pasha': 2000,
+//     'sasha':7000,
+// }
+// const { dima, artur, pasha, sasha } = employee;
+// console.log(dima,artur);
+
+// 5
+// let products = [
+//     { name: 'apple', prop: 'fruit' },
+//     { name: 'banana', prop: 'fruit' },
+//     { name: 'potato', prop: 'vegetable' },
+//     { name: 'carrot', prop: 'vegetable' },
+// ];
+// const [fruit1, fruit2, fruit3, fruit4] = products;
+// console.log(fruit1,fruit2);
+// 6
+// let products = [
+//   { name: "apple", price: 20, quantity: 5 },
+//   { name: "banana", price: 10, quantity: 12 },
+//   { name: "kiwi", price: 30, quantity: 3 },
+//   { name: "mango", price: 40, quantity: 7 }
+// ];
+// const [fruit1, fruit2, fruit3, fruit4] = products;
+// console.log(fruit1,fruit2);
+
+// 2 task
+// const Transaction = {
+//   DEPOSIT: 'deposit',
+//   WITHDRAW: 'withdraw',
+// };
+// const account = {
+//     balance: 0,
+//     transactions: [],
+//     createTransaction: function (ammount, type, id) {
+//         let transaction = { ammount:ammount, type: type , id: this.transactions.length }; 
+//         this.transactions.push(transaction);
+//     },
+//     deposit: function (ammount) {
+//         this.createTransaction(ammount, 'DEPOSIT',);
+//         this.balance += ammount;
+//         return `Ваш баланс: ${this.balance}`;
+//     },
+//     withdraw: function (ammount) {
+//         if (this.balance > ammount) {
+//             this.createTransaction(ammount, 'WITHDRAW',);
+//             this.balance -= ammount;
+//             return `Ваш баланс: ${this.balance}`;
+//         }
+//         else {
+//             return 'на вашому рахунку недостатьно коштів';
+//         }
+//     },
+//     getBalance: function () {
+//         return this.balance;
+//     },
+//     getTransactionDetails: function (id) {
+//         return this.transactions.find(transaction => transaction.id === id);  
+//     },
+//     getTransactionTotal: function (type) {
+//         let total = 0;
+//         let totalDep = this.transactions.filter(transaction => {
+//             if (transaction.type === type) {
+//                 return transaction;
+//             }
+//         });
+//         for (let element of totalDep) {
+//             total += element.ammount;
+//         }
+//         return `Сума усіх ${type} = ${total}`;
+//     }
+// }
+// console.log(account.deposit(400));
+// console.log(account.withdraw(200));
+// console.log(account.withdraw(500));
+// console.log(account.transactions);
+// console.log(account.getTransactionDetails(0));
+// console.log(account.getTransactionTotal('DEPOSIT'));
+
+
+
+
+
